@@ -21,7 +21,7 @@ public Result<IEnumerable<WeatherForecast>> GetForecastCollection()
     }
     else
     {
-        result.Error = new Error { Type = ErrorType.DatabaseFail, Message = "Fail" };
+        result.Error = new Error { Type = ErrorType.ServiceFail, Message = "Fail" };
     }
 
     return result;
