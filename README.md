@@ -2,13 +2,16 @@
 
 Helps to response with the expected status code. Requires .NET 5.
 
-Usage
+## Author's blog
+
+[Single Status Codes Strategy](https://akovanev.com/blogs/2020/09/09/how-to-sanitize-sensitive-data)
+
+## Usage
 
 ```
-[HttpGet]
-public ActionResult Get()
+public Result<IEnumerable<WeatherForecast>> GetForecastCollection()
 {
-    var collection = GetForecastCollection();
+    var collection = _weatherProvider.GetForecastCollection();
 
     var result = new Result<IEnumerable<WeatherForecast>>();
 
@@ -21,6 +24,14 @@ public ActionResult Get()
         result.Error = new Error { Type = ErrorType.DatabaseFail, Message = "Fail" };
     }
 
+    return result;
+}
+
+
+[HttpGet]
+public ActionResult Get()
+{
+    var result = _foreCastService.GetForecastCollection();
     return GetActionResult(RestType.Get, result);
 }
 
