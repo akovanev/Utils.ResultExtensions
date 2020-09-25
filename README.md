@@ -10,7 +10,7 @@ public ActionResult Get()
 {
     var collection = GetForecastCollection();
 
-        var result = new Result<IEnumerable<WeatherForecast>>();
+    var result = new Result<IEnumerable<WeatherForecast>>();
 
     if (collection is not null)
     {
