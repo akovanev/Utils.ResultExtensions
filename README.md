@@ -4,7 +4,7 @@ Helps to response with the expected status code. Requires .NET 5.
 
 ## Author's blog
 
-[Single Status Codes Strategy](https://akovanev.com/blogs/2020/09/09/how-to-sanitize-sensitive-data)
+[Single Strategy for Retrieving Response Status Codes](https://akovanev.com/blogs/2020/09/09/how-to-sanitize-sensitive-data)
 
 ## Usage
 
